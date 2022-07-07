@@ -1,20 +1,20 @@
 import PropTypes from 'prop-types';
 import { FaRegCommentAlt, FaRegChartBar } from 'react-icons/fa';
-import { Title, Wrapper} from './Section.styled';
+import { Title } from './Section.styled';
 
 export const Section = ({ title, children }) => {
   return (
-    <Wrapper>
+    <section>
       {title && (
-        <Title>
+        <Title
+        >
           {title}
           {title === 'Please leave feedback' && <FaRegCommentAlt />}
           {title === 'Statistics' && <FaRegChartBar />}
         </Title>
       )}
-
       {children}
-    </Wrapper>
+    </section>
   );
 };
 Section.propTypes = {

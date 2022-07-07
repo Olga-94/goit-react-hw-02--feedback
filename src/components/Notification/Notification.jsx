@@ -3,7 +3,7 @@ import { FaRegSurprise } from 'react-icons/fa';
 
 export const Notification = () => (
   <Text>
-    No feedback given <FaRegSurprise size="26" />
+    There is no feedback <FaRegSurprise size="26" />
   </Text>
 );
 

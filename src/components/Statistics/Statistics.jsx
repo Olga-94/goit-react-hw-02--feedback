@@ -1,3 +1,4 @@
+import { Box } from 'components/Box';
 import PropTypes from 'prop-types';
 import {
     FaRegSmile,
@@ -6,7 +7,7 @@ import {
     FaRegListAlt,
     FaRegSmileBeam,
   } from 'react-icons/fa';
-  import { List, Item, Text } from './Statistics.styled';
+  import { Item, Text } from './Statistics.styled';
 
 export const Statistics = ({
   good,
@@ -16,7 +17,10 @@ export const Statistics = ({
   positivePercent = 0 
 }) => {
   return (
-    <List>
+    <Box
+    as="ul"
+    display="flex"
+    justifyContent="center">
    <Item>
         <Text good>
           <FaRegSmile /> Good: {good}
@@ -43,7 +47,7 @@ export const Statistics = ({
           Positive: {positivePercent} %
         </Text>
       </Item>
-    </List>
+    </Box>
   );
 };
 Statistics.propTypes = {

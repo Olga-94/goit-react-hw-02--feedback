@@ -2,8 +2,8 @@ import { Component } from 'react';
 import { Box } from 'components/Box';
 import { Section } from './Section/Section';
 import { Feedback } from './Feedback/Feedback';
-import { Statistics } from 'components/Statistics/Statistics';
-import { Notification } from 'components/Notification/Notification';
+import { Statistics } from './Statistics/Statistics';
+import { Notification } from './Notification/Notification';
 
 
 export class App extends Component {
@@ -36,29 +36,25 @@ export class App extends Component {
 
   render() {
     const { good, neutral, bad } = this.state;
-
      return (
     <Box 
-    bg='backgroundSection'
+    bg="backgroundSection"
     display="flex"
     alignItems="center"
     justifyContent="center"
     flexDirection="column"
-   
+    boxShadow="default"
     >
        <Section 
-       title="Please leave feedback">
-        
-          <Box>
+         title="Please leave feedback">
             <Feedback
               options={this.state}
               changeFeedback={this.handleFeedback}
             />
-          </Box>
         </Section>
 
-        <Section title="Statistics">
-          <Box>
+        <Section title="Statistics"
+         >
             {this.totalFeedback() > 0 ? (
               <Statistics
                 good={good}
@@ -70,7 +66,6 @@ export class App extends Component {
             ) : (
               <Notification message="There is no feedback" />
             )}
-          </Box>
         </Section>
     </Box>
   ); 

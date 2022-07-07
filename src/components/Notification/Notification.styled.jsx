@@ -6,7 +6,7 @@ export const Text = styled.p`
   justify-content: center;
   text-align: center;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: ${p => p.theme.fontWeights.medium};
   color: #3c3c3c;
   & svg {
     margin-left: 10px;

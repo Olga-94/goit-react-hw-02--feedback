@@ -2,6 +2,8 @@ export const theme = {
     colors: {
       background: '#e1edf7',
       backgroundSection: '#f5f0f0',
+      backgroundTitle: '#ba9c9c',
+      text: '#000000',
     },
     space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
     fonts: {
