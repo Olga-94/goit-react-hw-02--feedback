@@ -6,8 +6,7 @@ export const Section = ({ title, children }) => {
   return (
     <section>
       {title && (
-        <Title
-        >
+        <Title>
           {title}
           {title === 'Please leave feedback' && <FaRegCommentAlt />}
           {title === 'Statistics' && <FaRegChartBar />}
