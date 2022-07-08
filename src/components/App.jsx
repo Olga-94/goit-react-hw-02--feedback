@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { Box } from 'components/Box';
 import { Section } from './Section/Section';
-import { Feedback } from './Feedback/Feedback';
+import { FeedbackOptions} from './Feedback/Feedback';
 import { Statistics } from './Statistics/Statistics';
 import { Notification } from './Notification/Notification';
 
@@ -47,9 +47,9 @@ export class App extends Component {
     >
        <Section 
          title="Please leave feedback">
-            <Feedback
+            <FeedbackOptions
               options={this.state}
-              changeFeedback={this.handleFeedback}
+              onLeaveFeedback={this.handleFeedback}
             />
         </Section>
 

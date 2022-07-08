@@ -3,7 +3,7 @@ import { Item } from './Feedback.styled';
 import { Button } from '../Button/Buttons';
 import { Box } from 'components/Box';
 
-export const Feedback = ({ options, changeFeedback }) => {
+export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   options = Object.keys(options);
 
   return (
@@ -14,19 +14,19 @@ export const Feedback = ({ options, changeFeedback }) => {
     >
       {options.map(option => (
         <Item key={option}>
-          <Button feedback={option} onClick={changeFeedback} />
+          <Button feedback={option} onClick={onLeaveFeedback} />
         </Item>
       ))}
     </Box>
   );
 };
 
-Feedback.propTypes = {
+FeedbackOptions.propTypes = {
   options: PropTypes.shape({
     good: PropTypes.number.isRequired,
     neutral: PropTypes.number.isRequired,
     bad: PropTypes.number.isRequired,
   }).isRequired,
-  changeFeedback: PropTypes.func.isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
 };
 
