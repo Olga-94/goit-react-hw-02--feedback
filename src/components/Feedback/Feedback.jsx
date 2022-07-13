@@ -4,7 +4,7 @@ import { Button } from '../Button/Buttons';
 import { Box } from 'components/Box';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
-  options = Object.keys(options);
+  // options = Object.keys(options);
 
   return (
     <Box 
@@ -22,11 +22,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
 };
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.shape({
-    good: PropTypes.number.isRequired,
-    neutral: PropTypes.number.isRequired,
-    bad: PropTypes.number.isRequired,
-  }).isRequired,
+  options: PropTypes.array.isRequired,
   onLeaveFeedback: PropTypes.func.isRequired,
 };
 

@@ -13,6 +13,8 @@ export class App extends Component {
     bad: 0,
   };
 
+  options = Object.keys(this.state);
+
   handleFeedback = opt => {
     const feedback = opt.currentTarget.dataset.feedback;
     this.setState(prevState => {
@@ -48,7 +50,7 @@ export class App extends Component {
        <Section 
          title="Please leave feedback">
             <FeedbackOptions
-              options={this.state}
+              options={this.options}
               onLeaveFeedback={this.handleFeedback}
             />
         </Section>
@@ -72,3 +74,4 @@ export class App extends Component {
   }
 
 };
+
