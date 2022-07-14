@@ -55,7 +55,7 @@ export class App extends Component {
             />
         </Section>
 
-        <Section title="Statistics"
+        <Section title="Statistics" 
          >
             {this.totalFeedback() > 0 ? (
               <Statistics
